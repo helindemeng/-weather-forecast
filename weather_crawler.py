@@ -24,7 +24,7 @@ def weather(url=None):
         h1 = i.find("h1").get_text()  # 日期
         p1 = i.find('p', attrs={"class": "wea"}).get_text()  # 天气
         p2 = i.find('p', attrs={"class": "tem"})
-        tem = p2.find("span").get_text() + "~" + p2.find("i").get_text()  # 温度
+        tem = p2.find("span").get_text() + "/" + p2.find("i").get_text()  # 温度
         win = i.find("p", attrs={"class": "win"}).find("i").get_text()  # 风力
 
         # print(h1)
